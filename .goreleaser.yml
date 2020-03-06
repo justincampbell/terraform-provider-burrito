@@ -10,6 +10,7 @@ builds:
     - amd64
   hooks:
     post: touch dist/metadata.json
+  binary: '{{ .ProjectName }}_{{ .Version }}'
 archives:
 - format: zip
   name_template: '{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}'
